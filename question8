@@ -1,0 +1,5 @@
+Implement Locks for a Particular Table:
+Locks control concurrent access to data, preventing conflicts between transactions.
+
+LOCK TABLE employees IN EXCLUSIVE MODE;
+

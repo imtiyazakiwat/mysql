@@ -1,0 +1,11 @@
+Write PL/SQL Procedure with Cursors:
+Cursors are used to retrieve and manipulate multiple rows in PL/SQL.
+
+CREATE OR REPLACE PROCEDURE get_high_paid_employees IS
+    CURSOR c_high_paid IS
+        SELECT employee_id, salary FROM employees WHERE salary > 50000;
+BEGIN
+    FOR emp_rec IN c_high_paid LOOP
+        DBMS_OUTPUT.PUT_LINE('Employee ID: ' || emp_rec.employee_id || ', Salary: ' || emp_rec.salary);
+    END LOOP;
+END;

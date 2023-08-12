@@ -1,0 +1,5 @@
+Execute DML Commands:
+DML (Data Manipulation Language) commands are used to manage data in the database.
+
+INSERT INTO students (student_id, name)
+VALUES (1, 'John');

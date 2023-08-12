@@ -1,0 +1,31 @@
+Write PL/SQL Procedure Using Packages:
+Packages group related PL/SQL objects (procedures, functions, variables) into a single unit.
+
+CREATE OR REPLACE PACKAGE employee_mgmt AS
+    PROCEDURE update_salary(emp_id NUMBER, new_salary NUMBER);
+    FUNCTION calculate_bonus(salary NUMBER) RETURN NUMBER;
+END employee_mgmt;
+
+CREATE OR REPLACE PACKAGE BODY employee_mgmt AS
+    PROCEDURE update_salary(emp_id NUMBER, new_salary NUMBER) IS
+    BEGIN
+        UPDATE employees SET salary = new_salary WHERE employee_id = emp_id;
+        COMMIT;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('Employee not found.');
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('An error occurred.');
+    END;
+
+    FUNCTION calculate_bonus(salary NUMBER) RETURN NUMBER IS
+        bonus NUMBER;
+    BEGIN
+        IF salary > 50000 THEN
+            bonus := salary * 0.1;
+        ELSE
+            bonus := salary * 0.05;
+        END IF;
+        RETURN bonus;
+    END;
+END employee_mgmt;

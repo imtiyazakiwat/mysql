@@ -1,0 +1,6 @@
+Execute a single line query and group functions:
+You can execute a query and use grouping functions like SUM, AVG, COUNT, etc.
+
+SELECT department_id, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department_id;
