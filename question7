@@ -1,6 +1,0 @@
-Create Views for a Particular Table:
-Views are virtual tables created from one or more existing tables.
-
-CREATE VIEW employee_details AS
-SELECT employee_id, first_name, last_name, salary
-FROM employees;

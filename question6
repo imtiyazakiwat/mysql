@@ -1,6 +1,0 @@
-Implement Join Operations in SQL:
-Join operations combine rows from different tables based on a related column.
-
-SELECT employees.name, departments.department_name
-FROM employees
-INNER JOIN departments ON employees.department_id = departments.department_id;

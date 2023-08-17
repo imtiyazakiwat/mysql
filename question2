@@ -1,7 +1,0 @@
-Execute DDL Commands:
-DDL (Data Definition Language) commands are used to define, alter, or delete database structures.
-
-CREATE TABLE students (
-    student_id NUMBER,
-    name VARCHAR2(50)
-);

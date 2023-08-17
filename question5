@@ -1,6 +1,0 @@
-Implement Nested Queries:
-Nested queries are queries inside another query's WHERE or HAVING clause.
-
-SELECT name
-FROM students
-WHERE student_id IN (SELECT student_id FROM enrollments WHERE course_id = 101);
