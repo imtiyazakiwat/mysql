@@ -1,4 +1,3 @@
--- PL/SQL Procedure with Functions
 DECLARE
     a INT;
     b INT;

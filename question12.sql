@@ -1,10 +1,8 @@
--- Creating a PL/SQL package
 CREATE OR REPLACE PACKAGE FactorialPackage AS
     PROCEDURE CalculateFactorial(num IN INT);
 END FactorialPackage;
 /
 
--- Creating the package body
 CREATE OR REPLACE PACKAGE BODY FactorialPackage AS
     PROCEDURE CalculateFactorial(num IN INT) IS
         result INT := 1;
@@ -27,10 +25,9 @@ END FactorialPackage;
 
 
 
--- Calling the procedure from the package
 BEGIN
-    FactorialPackage.CalculateFactorial(5); -- Calculate factorial of 5
-    FactorialPackage.CalculateFactorial(10); -- Calculate factorial of 10
+    FactorialPackage.CalculateFactorial(5);
+    FactorialPackage.CalculateFactorial(10); 
 END;
 /
 

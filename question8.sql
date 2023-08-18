@@ -1,4 +1,3 @@
--- PL/SQL Procedure with Exception Handling
 DECLARE
     c_id customer6161.id%TYPE := 8;
     c_name customer6161.name%TYPE;

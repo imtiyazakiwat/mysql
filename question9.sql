@@ -1,4 +1,3 @@
--- PL/SQL Procedure with Cursors
 DECLARE
     CURSOR c1 IS
         SELECT ename, sal
