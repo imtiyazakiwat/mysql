@@ -67,4 +67,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-This repository is licensed under the [IMT License](LICENSE).
+This repository is licensed under the [MIT License](LICENSE).
