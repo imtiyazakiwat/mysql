@@ -1,14 +1,14 @@
 CREATE OR REPLACE PACKAGE FactorialPackage AS
-    PROCEDURE CalculateFactorial(num IN INT);
+    PROCEDURE CalculateFactorial(num IN NUMBER);
 END FactorialPackage;
 /
 
 CREATE OR REPLACE PACKAGE BODY FactorialPackage AS
-    PROCEDURE CalculateFactorial(num IN INT) IS
-        result INT := 1;
+    PROCEDURE CalculateFactorial(num IN NUMBER) IS
+        result NUMBER := 1;
     BEGIN
         IF num < 0 THEN
-            DBMS_OUTPUT.PUT_LINE('Factorial is not defined for negative INTs.');
+            DBMS_OUTPUT.PUT_LINE('Factorial is not defined for negative NUMBERs.');
             RETURN;
         END IF;
 

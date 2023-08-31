@@ -1,11 +1,11 @@
 
 CREATE TABLE students(
     name VARCHAR(10),
-    age INT(2)
+    age NUMBER(2)
 );
 
 
-ALTER TABLE students ADD mobno INT(10);
+ALTER TABLE students ADD mobno NUMBER(10);
 
 ALTER TABLE students DROP COLUMN mobno;
 

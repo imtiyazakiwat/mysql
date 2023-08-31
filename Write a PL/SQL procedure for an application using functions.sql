@@ -1,10 +1,10 @@
 DECLARE
-    a INT;
-    b INT;
-    c INT;
+    a NUMBER;
+    b NUMBER;
+    c NUMBER;
     
-    FUNCTION findMin(x IN INT, y IN INT)
-    RETURN INT
+    FUNCTION findMin(x IN NUMBER, y IN NUMBER)
+    RETURN NUMBER
     IS
     BEGIN
         IF x < y THEN

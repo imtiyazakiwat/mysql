@@ -1,5 +1,5 @@
 CREATE TABLE student6161(
-    stuid INT(10),
+    stuid NUMBER(10),
     name VARCHAR(10),
     address VARCHAR(10)
 );
