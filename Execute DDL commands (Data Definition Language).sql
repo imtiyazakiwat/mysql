@@ -1,12 +1,5 @@
-
-CREATE TABLE students(
-    name VARCHAR(10),
-    age NUMBER(2)
-);
-
-
-ALTER TABLE students ADD mobno NUMBER(10);
-
-ALTER TABLE students DROP COLUMN mobno;
-
-DROP TABLE students;
+create table student61(stuid number(10), stuname varchar(10), address varchar(10));
+desc student61;
+Alter table student61 Add(mobno number(10));
+desc student61;
+Drop table student61;

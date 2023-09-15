@@ -1,0 +1,12 @@
+create table student6161(stuid varchar(10), name varchar(10), address varchar(10));
+desc student6161;
+insert into student6161 values('1','Snehal','Nippani');
+insert into student6161 values('2','Nikhil','Mumbai');
+insert into student6161 values('3','Rahul','Pune');
+select * from student6161;
+Update student6161 set name='Shardul' where stuid='1' and name='Snehal';
+select * from student6161;
+Update student6161 set address='Dubai' where stuid='2' and name ='Nikhil';
+select * from student6161;
+Delete from student6161 where name='Shardul';
+select * from student6161;

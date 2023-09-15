@@ -1,6 +1,16 @@
-CREATE TABLE customer6161(id NUMBER(10), name VARCHAR(10), age NUMBER(2), address VARCHAR(10), salary NUMBER(10));
-CREATE TABLE orders6161(oid NUMBER(10), customerid NUMBER(10), amount NUMBER(10));
-
-SELECT a.id, b.name, a.salary
-FROM customer6161 a, customer6161 b
-WHERE a.salary < b.salary;
+create table customer6161(id number(10), name varchar(10), age number(2), address varchar(10), salary number(10));
+insert into customer6161 values(1,'Ramesh',32,'Ahmdabad',2000);
+insert into customer6161 values(2,'Khilan',25,'Delhi',1500);
+insert into customer6161 values(3,'Kaushik',23,'kota',2000);
+insert into customer6161 values(4,'Chaitali',25,'Mumbai',6500);
+insert into customer6161 values(5,'Hardik',27,'Bhopal',8500);
+insert into customer6161 values(6,'Komal',22,'MP',4500);
+insert into customer6161 values(7,'Muffy',24,'Indore',10000);
+select * from customer6161;
+create table orders6161(oid number(10), customerid number(10), amount number(10));
+insert into orders6161 values(102,3,3000);
+insert into orders6161 values(100,3,1500);
+insert into orders6161 values(101,2,1560);
+insert into orders6161 values(103,4,2060);
+select * from orders6161;
+select id,name,age,amount from customer6161,orders6161 where customer6161.id=orders6161.customerid;

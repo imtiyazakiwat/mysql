@@ -1,17 +1,15 @@
-DECLARE
-    CURSOR c1 IS
-        SELECT ename, sal
-        FROM Employee6161
-        ORDER BY sal DESC;
-    v_ename Employee6161.ename%TYPE;
-    v_sal Employee6161.sal%TYPE;
-BEGIN
-    OPEN c1;
-    LOOP
-        FETCH c1 INTO v_ename, v_sal;
-        EXIT WHEN c1%ROWCOUNT > 5;
-        DBMS_OUTPUT.PUT_LINE(v_ename || ' ' || v_sal);
-    END LOOP;
-    CLOSE c1;
-END;
+create table Employee6161(ename varchar(10), empno number(10), sal number(10));
+insert into Employee6161 values('Arun',1,2500);
+insert into Employee6161 values('Bhaskar',2,3000);
+insert into Employee6161 values('Chetan',3,3500);
+declare
+  v_sal number(10);
+  v_empno number(10);
+begin
+  for emp in (select empno, sal from Employee6161) loop
+    v_empno := emp.empno;
+    v_sal := emp.sal;
+    dbms_output.put_line('Employee Number: ' || v_empno || ', Salary: ' || v_sal);
+  end loop;
+end;
 /

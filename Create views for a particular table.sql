@@ -1,7 +1,12 @@
-CREATE TABLE college6161(id NUMBER(10), name VARCHAR(20), age NUMBER(10), address VARCHAR(10), salary NUMBER(10));
-
-CREATE VIEW Gouri_view AS
-SELECT name, age
-FROM college6161;
-
-SELECT * FROM Gouri_view;
+create table college6161(id number(10), name varchar(20), age number(10), address varchar(10), salary number(10));
+insert into college6161 values('11','Raju','36','Shiraguppi','2000');
+select * from college6161;
+create view Gouri_view as select name,age from college6161;
+select * from Gouri_view;
+update Gouri_view set age=34 where name='Raju';
+select * from Gouri_view;
+insert into Gouri_view values('Shifa',22);
+select * from Gouri_view;
+delete from Gouri_view where age=36;
+select * from Gouri_view;
+drop view Gouri_view;
